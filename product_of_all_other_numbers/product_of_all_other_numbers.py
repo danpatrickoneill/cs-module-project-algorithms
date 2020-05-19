@@ -3,10 +3,15 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
-    pass
-
+    # First pass
+    # Create placeholder list for return
+    products = [1] * len(arr)
+    for i in range(len(products)):
+        for j in range(len(arr)):
+            if i == j:
+                continue
+            products[i] *= arr[j]
+    return products
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
